@@ -1,0 +1,8 @@
+export  {Search, Check} from '@styled-icons/boxicons-regular' 
+export  {PersonAdd} from '@styled-icons/ionicons-sharp'
+export  {Bell, User} from '@styled-icons/boxicons-solid'
+export  {Fire} from '@styled-icons/heroicons-solid'
+export {Database} from '@styled-icons/foundation'
+export {LiveHelp, History} from '@styled-icons/material'
+export {Cycle} from '@styled-icons/entypo'
+export {CloseCircle} from '@styled-icons/ionicons-outline'
