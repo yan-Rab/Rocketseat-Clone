@@ -77,10 +77,13 @@ width: 100%;
 height: 40px;
 font-family: 'Roboto', sans-serif;
 color: var(--title);
-
-
 border: none;
 outline: none;
 border-radius: 4px;
 font-size: 1.6rem;
+transition: filter 0.3s;
+
+&:hover{
+    filter: brightness(110%);
+}
 `

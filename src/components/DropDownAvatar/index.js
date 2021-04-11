@@ -14,7 +14,7 @@ BackIcon,
 ButtonFeedBack
 } from './styles'
 
-export default function DropDown(){
+export default function DropDownAvatar(){
    
 
     return(

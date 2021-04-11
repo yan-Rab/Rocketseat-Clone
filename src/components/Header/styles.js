@@ -9,16 +9,22 @@ import {
 export const Container = styled.header`
 display: flex;
 width: 100%;
+justify-content:center;
 position: fixed;
-
-justify-content: space-Between;
-align-items: center;
 background: var(--gray-dark);
 height: 72px;
-padding: 0 calc(7vw);
+padding: 0 20px;
+`
+export const Wrapper = styled.div`
+width: 100%;
+display: flex;
+justify-content: space-Between;
+align-items: center;
+max-width: 1300px;
 `
 
 export const Logo = styled.img`
+
 `
 
 export const NavBar = styled.nav`
@@ -53,7 +59,33 @@ export const NavIcons = styled.nav`
 display: flex;
 align-items: center;
 height: 100%;
+`
 
+export const BoxSearch = styled.div`
+display: flex;
+border: 2px gray solid;
+border-radius: 4px;
+
+align-items: center;
+background: var(--background);
+padding: 6px 4px;
+height: 42px;
+width: calc(25vw + 40px);
+`
+export const InputSearch = styled.input`
+height: 100%;
+width: 100%;
+background: none;
+border: none;
+outline: none;
+font-family: 'Roboto', sans-serif;
+color: var(--title);
+font-size: 1.6rem;
+
+&::placeholder{
+    color: var(--text);
+    font-family: 'Roboto', sans-serif;
+}
 `
 
 export const ButtonIcon = styled.button`

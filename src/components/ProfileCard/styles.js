@@ -82,6 +82,11 @@ text-decoration: none;
 
 border-radius: 6px;
 background: var(--purple);
+
+transition: filter 0.3s;
+&:hover{
+    filter: brightness(110%);
+}
 `
 
 

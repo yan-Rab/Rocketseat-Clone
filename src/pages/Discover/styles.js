@@ -1,0 +1,84 @@
+import styled, {css} from 'styled-components'
+
+import {
+    Rocket,
+    Rocket2,
+    UserAstronaut,
+    LocationPin
+} from '../../components/Icons'
+
+
+export const Container = styled.div`
+display: flex;
+min-height: 100%;
+width: 100%;
+padding: 10.4rem 4vw 5vh;
+`
+export const Wrapper = styled.div`
+display: flex;
+flex-direction: column;
+width: 100%;
+max-width: 1300px;
+`
+
+export const Community = styled.section`
+display: flex;
+width: 100%;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid var(--gray-dark);
+padding: 20px 0;
+`
+export const Box = styled.div``
+
+
+export const Text = styled.div`
+font-family: 'Roboto', sans-serif;
+font-size: 3.5rem;
+color: var(--title);
+`
+export const ButtonLinkCommunity = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+background: var(--purple);
+border-radius: 4px;
+color: var(--title);
+font-family: 'Roboto', sans-serif;
+font-size: 1.4rem;
+height: 69px;
+width: 153px;
+font-weight: 500;
+`
+
+export const Title = styled.h1`
+font-family: 'Roboto', sans-serif;
+color: var(--title);
+font-size: 3rem;
+margin-top: 50px;
+`
+
+export const Trails = styled.section`
+display: flex;
+margin-top: 10px;
+width: 100%;
+align-items: center;
+padding: 20px 0;
+border-bottom: 1px solid var(--gray-dark);
+& div + div{
+    margin-left: 35px;
+}
+`
+
+export const iconCSS = css`
+width: 100%;
+height: 100%;
+fill: white;
+color: white;
+`
+
+export const RocketIcon = styled(Rocket)`${iconCSS}`
+export const Rocket2Icon = styled(Rocket2)`${iconCSS}`
+export const LocationPinIcon = styled(LocationPin)`${iconCSS}`
+export const UserAstronautIcon = styled(UserAstronaut)`${iconCSS}`
+
