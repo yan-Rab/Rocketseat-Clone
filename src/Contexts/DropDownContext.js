@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import DropDownAvatar from '../components/DropDownAvatar'
 import DropDownIcons from '../components/DropDownIcons'
+import WrapperDropDowns from '../components/WrapperDropDowns'
 
 export const DropDownContext = React.createContext({})
-
 
 export function DropDownContextProvider({children}){
 
@@ -29,21 +29,22 @@ export function DropDownContextProvider({children}){
         setIsVisibleDropDownAvatar(false)
     }
 
-
     return(
 
     <DropDownContext.Provider value = {{
-
         changeVisibleDropDownAvatar,
         changeVisibleDropDownNotifications,
         changeVisibleDropDownInvites
     }}>
+
+        <WrapperDropDowns>
+
         {isVisibleDropDownAvatar && <DropDownAvatar />}
         {isVisibleDropDownNotifications && <DropDownIcons title = 'Notificações'/>}
         
-        {isVisibleDropDownInvites && <DropDownIcons title = 'Convites pendentes' rightMargin = 'calc(6vw + 150px)'/>}
-
-        
+        {isVisibleDropDownInvites && <DropDownIcons title = 'Convites pendentes' rightMargin = '130px'/>}
+       
+        </WrapperDropDowns>
 
         {children}
     </DropDownContext.Provider>

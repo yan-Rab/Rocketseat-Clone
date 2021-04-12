@@ -4,11 +4,11 @@ export const Container = styled.div`
 display: flex;
 flex-direction: column;
 background: var(--gray-dark);
-position:absolute;
-top: 82px;
+position:fixed;
+z-index: 2;
 border-radius: 6px;
 width: 400px;
-right:${props => props.rightMargin ? props.rightMargin : 'calc(6vw + 90px)'};
+margin-right: ${props => props.rightMargin ? props.rightMargin : '90px'};
 animation: fadein 0.4s;
 
 @keyframes fadein{
@@ -22,7 +22,7 @@ animation: fadein 0.4s;
 }
 
 @media(max-width: 771px){
-    right: 0;
+    margin-right: 0;
     width: 100%;
     top: 72px;
     border-radius: 0 6px;

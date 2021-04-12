@@ -18,6 +18,7 @@ export default function DropDownAvatar(){
    
 
     return(
+    
         <Container>
             <GroupLink>
                 <ProfileIcon />
@@ -56,5 +57,6 @@ export default function DropDownAvatar(){
             </GroupLink>
             
         </Container>
+        
     )
 }

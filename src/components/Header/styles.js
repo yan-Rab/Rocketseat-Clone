@@ -11,6 +11,7 @@ display: flex;
 width: 100%;
 justify-content:center;
 position: fixed;
+z-index: 2;
 background: var(--gray-dark);
 height: 72px;
 padding: 0 20px;

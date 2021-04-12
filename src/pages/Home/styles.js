@@ -5,7 +5,7 @@ display: flex;
 flex-direction: column;
 height: 100%;
 align-items: center;
-justify-content: space-between;
+
 padding: 13.4rem 4vw 5vh;
 
 @media(max-width: 681px){
@@ -18,7 +18,6 @@ export const Wrapper = styled.div`
 display: flex;
 height: 100%;
 flex-direction: column;
-justify-content: space-between;
 width: min(100%, max(1100px));
 `
 

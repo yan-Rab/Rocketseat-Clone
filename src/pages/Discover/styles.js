@@ -4,7 +4,8 @@ import {
     Rocket,
     Rocket2,
     UserAstronaut,
-    LocationPin
+    LocationPin,
+    Run
 } from '../../components/Icons'
 
 
@@ -12,7 +13,9 @@ export const Container = styled.div`
 display: flex;
 min-height: 100%;
 width: 100%;
+position: relative;
 padding: 10.4rem 4vw 5vh;
+justify-content: center;
 `
 export const Wrapper = styled.div`
 display: flex;
@@ -29,11 +32,18 @@ align-items: center;
 border-bottom: 1px solid var(--gray-dark);
 padding: 20px 0;
 `
-export const Box = styled.div``
+export const Box = styled.div`
+display: flex;
+align-items: center;
+`
 
-
+export const LogoDiscover = styled.img`
+width: 60px;
+height: 60px;
+`
 export const Text = styled.div`
-font-family: 'Roboto', sans-serif;
+margin-left: 15px;
+font-family: 'Roboto' , -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
 font-size: 3.5rem;
 color: var(--title);
 `
@@ -60,7 +70,6 @@ margin-top: 50px;
 
 export const Trails = styled.section`
 display: flex;
-margin-top: 10px;
 width: 100%;
 align-items: center;
 padding: 20px 0;
@@ -81,4 +90,18 @@ export const RocketIcon = styled(Rocket)`${iconCSS}`
 export const Rocket2Icon = styled(Rocket2)`${iconCSS}`
 export const LocationPinIcon = styled(LocationPin)`${iconCSS}`
 export const UserAstronautIcon = styled(UserAstronaut)`${iconCSS}`
+
+export const Marathons = styled.section`
+display: flex;
+margin-top: 10px;
+width: 100%;
+align-items: center;
+padding: 20px 0;
+border-bottom: 1px solid var(--gray-dark);
+& div + div{
+    margin-left: 35px;
+}
+`
+
+export const RunIcon = styled(Run)`${iconCSS}`
 

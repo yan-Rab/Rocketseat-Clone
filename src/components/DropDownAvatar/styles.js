@@ -10,14 +10,15 @@ import {
 
 
 export const Container = styled.div`
-position: absolute;
+
 background: var(--gray-dark);
-top: 82px;
+
+margin-right: 20px;
+z-index: 2;
 display: flex;
 flex-direction: column;
 border-radius: 6px;
 width: 240px;
-right:calc(8vw);
 animation: fadein 0.4s;
 
 @keyframes fadein{

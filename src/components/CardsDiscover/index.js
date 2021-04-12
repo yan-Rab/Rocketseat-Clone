@@ -5,7 +5,7 @@ import {
     Description
 } from './styles'
 
-export default function TrailCard({children,title, description, colorSecondary}){
+export default function CardsDiscover({children,title, description, colorSecondary}){
     return(
         <Container colorSecondary = {colorSecondary}>
             <Avatar colorSecondary = {colorSecondary}>
