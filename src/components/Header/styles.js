@@ -1,9 +1,11 @@
 import styled, {css} from 'styled-components'
 import {NavLink} from 'react-router-dom'
+
 import {
     Search,
     Bell,
-    PersonAdd
+    PersonAdd,
+    Menu
 } from '../Icons'
 
 export const Container = styled.header`
@@ -14,7 +16,14 @@ position: fixed;
 z-index: 2;
 background: var(--gray-dark);
 height: 72px;
-padding: 0 20px;
+padding: 0px 20px;
+
+transition: height 0.4s;
+
+@media(max-width: 769px){
+    height: 60px;
+    padding: 0 10px;
+}
 `
 export const Wrapper = styled.div`
 width: 100%;
@@ -24,8 +33,67 @@ align-items: center;
 max-width: 1300px;
 `
 
-export const Logo = styled.img`
+export const Flex = styled.div`
+display: flex;
+align-items: center;
+`
 
+export const FlexColumn = styled.div`
+display: flex;
+flex-direction: column;
+
+@media(min-width: 467px){
+    position: relative
+}
+`
+export const BoxLogo = styled.div`
+display: flex;
+
+@media(max-width: 467px){
+display: none;
+
+}
+`
+
+export const BoxLogoAlt = styled.span`
+display: none;
+
+@media(max-width: 467px){
+display: flex;
+}
+`
+export const Logo = styled.img`
+transition: height 0.4s;
+
+@media(max-width: 769px){
+   margin-left: 15px;
+   width: 150px;
+   height: 30px;
+
+}
+`
+
+export const LogoAlt = styled.img`
+width: 65px;
+height: 65px;
+`
+
+export const MenuIcon = styled(Menu)`
+display: none;
+width: 35px;
+margin-left: 30px;
+height: 35px;
+fill: #737380;
+color: #737380;
+
+
+@media(max-width: 467px){
+margin-left: 5px;
+}
+
+@media(max-width: 1039px){
+display: flex;
+}
 `
 
 export const NavBar = styled.nav`
@@ -60,20 +128,25 @@ export const NavIcons = styled.nav`
 display: flex;
 align-items: center;
 height: 100%;
+
 `
 
 export const BoxSearch = styled.div`
 display: flex;
-border: 2px gray solid;
+border: 2px #2a2a2a solid;
 border-radius: 4px;
-
+margin-right: 10px;
 align-items: center;
 background: var(--background);
 padding: 6px 4px;
-height: 42px;
-width: calc(25vw + 40px);
+height: 46px;
+min-width: 290px;
+
+@media(max-width: 760px){
+    display: none;
+}
 `
-export const InputSearch = styled.input`
+export const Input = styled.input`
 height: 100%;
 width: 100%;
 background: none;
@@ -112,6 +185,10 @@ height: 21px;
 
 margin: 0 14px;
 fill: var(--text);
+
+@media(max-width: 769px){
+   margin: 0 10px;
+}
 `
 
 export const SearchIcon = styled(Search)`
@@ -138,6 +215,11 @@ border: 2px var(--title) solid;
 margin: 0 15px;
 border-radius: 50%;
 background-color: gray;
+
+@media(max-width: 769px){
+    height: 42px;
+    width: 42px;
+}
 `
 
 export const Image = styled.img`

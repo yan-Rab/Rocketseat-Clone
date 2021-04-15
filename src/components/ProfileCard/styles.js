@@ -12,6 +12,10 @@ max-width: 600px;
 padding: 3rem 0;
 background: var(--gray-dark);
 border-radius: 4px;
+
+@media(max-width: 940px){
+    max-width: 100%;
+}
 `
 
 export const Flex = styled.div`

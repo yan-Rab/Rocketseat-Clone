@@ -2,15 +2,17 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
 display: flex;
-flex:1;
-padding: 30px;
-height: 400px;
+flex: 1;
+padding: 32px 32px 64px;
+order: 5;
+gap: 16px;
 flex-direction: column;
 border-radius: 6px 6px 0 0;
 background: var(--gray-dark);
 margin: 20px 0;
 border-bottom: 2px ${props => props.colorSecondary} solid;
 transition: filter 0.3s;
+
 &:hover{
     filter: brightness(130%);
 }

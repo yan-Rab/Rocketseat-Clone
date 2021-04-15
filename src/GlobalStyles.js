@@ -1,4 +1,4 @@
-import styled,{createGlobalStyle} from 'styled-components'
+import {createGlobalStyle} from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -30,6 +30,19 @@ body{
 
 `
 
+export const linkStyles = {
+    borderBottomColor: 'var(--purple)', 
+    borderBottomWidth: 2, 
+    borderBottomStyle: 'solid',
+    color: 'var(--title)'
+}
+
+export const linkStylesDropDown = {
+    borderLeftColor: 'var(--purple)', 
+    borderLeftWidth: 2, 
+    borderLeftStyle: 'solid',
+    color: 'var(--title)'
+}
 
 
 

@@ -1,4 +1,4 @@
-export  {Search, Check} from '@styled-icons/boxicons-regular' 
+export  {Search, Check, Menu} from '@styled-icons/boxicons-regular' 
 export  {PersonAdd} from '@styled-icons/ionicons-sharp'
 export  {Bell, User} from '@styled-icons/boxicons-solid'
 export  {Fire} from '@styled-icons/heroicons-solid'

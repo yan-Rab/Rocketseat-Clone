@@ -1,11 +1,20 @@
 
-import React, {useContext, useState} from 'react'
+import React, {useContext} from 'react'
 import logo from '../../assets/images/logo-rocket.png'
+import logoAlt from '../../assets/images/rocket.png'
 import {DropDownContext} from '../../Contexts/DropDownContext'
+import DropDownNavigation from '../DropDownNavigation'
+
 import {
     Container,
     Wrapper,
+    Flex,
+    FlexColumn,
+    BoxLogo,
+    BoxLogoAlt,
+    LogoAlt,
     Logo,
+    MenuIcon,
     NavBar,
     Link,
     NavIcons,
@@ -16,34 +25,54 @@ import {
     Avatar,
     Image,
     BoxSearch,
-    InputSearch
+    Input
 } from './styles'
 
-const linkStyles = {
-    borderBottomColor: 'var(--purple)', 
-    borderBottomWidth: 2, 
-    borderBottomStyle: 'solid',
-    color: 'var(--title)'
-}
+import {linkStyles} from '../../GlobalStyles'
 
 export default function Header(){
 
-    const [isVisibleInput, setIsVisibleInput] = useState(false)
 
     const {
         changeVisibleDropDownAvatar,
         changeVisibleDropDownNotifications,
-        changeVisibleDropDownInvites
+        changeVisibleDropDownInvites,
+        isVisibleDropDownNavigation,
+        changeVisibleDropDownNavigation,
+        isVisibleSearchInput,
+        changeVisibleSearchInput
     } = useContext(DropDownContext)
 
-    console.log(isVisibleInput)
 
     return(
         <Container>
             <Wrapper>
-            <Logo src = {logo}/>
 
-            {!isVisibleInput && (
+
+            <Flex>
+                <BoxLogo>
+                    <Logo src = {logo}/>
+                    
+                </BoxLogo>
+                
+                <BoxLogoAlt>
+                    <LogoAlt src = {logoAlt}/>
+                </BoxLogoAlt>
+                
+                <FlexColumn>
+                    {!isVisibleSearchInput && (
+                        <MenuIcon onClick = {changeVisibleDropDownNavigation}/>
+                    )}
+                    
+
+                    {isVisibleDropDownNavigation && <DropDownNavigation />}
+                    
+                </FlexColumn>
+                
+            </Flex>
+            
+
+            {!isVisibleSearchInput && (
                 <NavBar>
                     <Link exact to = '/' activeStyle = {linkStyles}>Home</Link>
                     <Link to = '/Profile' activeStyle = {linkStyles}>Perfil</Link>
@@ -54,18 +83,18 @@ export default function Header(){
 
             <NavIcons>
 
-                {isVisibleInput ? (
+                {isVisibleSearchInput ? (
                    
                     <BoxSearch>
-                        <SearchIcon onClick = {() => setIsVisibleInput(!isVisibleInput)}/>
-                        <InputSearch 
+                        <SearchIcon onClick = {changeVisibleSearchInput}/>
+                        <Input
                         placeholder = 'Busque uma pessoa' 
                         autoFocus
-                        onBlur = {() => setIsVisibleInput(false) }/>
+                        onBlur = {changeVisibleSearchInput}/>
                     </BoxSearch>
                    
                 ) : (
-                    <ButtonIcon onClick = {() => setIsVisibleInput(!isVisibleInput)}>
+                    <ButtonIcon onClick = {changeVisibleSearchInput}>
                         <SearchIcon  />
                     </ButtonIcon>
                 )}
@@ -74,14 +103,16 @@ export default function Header(){
                 <ButtonIcon onClick = {changeVisibleDropDownInvites}>
                     <PersonIcon />
                 </ButtonIcon>
-
+                
+               
                 <ButtonIcon onClick = {changeVisibleDropDownNotifications}>
                     <BellIcon />
                 </ButtonIcon>
-                
+
                 <Avatar onClick = {changeVisibleDropDownAvatar}>
                     <Image src = 'https://avatars.githubusercontent.com/u/63311216?v=4' />
                 </Avatar>
+
             </NavIcons>
             </Wrapper>
         </Container>

@@ -5,9 +5,11 @@ display: flex;
 flex-direction: column;
 background: var(--gray-dark);
 position:fixed;
+margin-top: 26px;
 z-index: 2;
 border-radius: 6px;
 width: 400px;
+box-shadow: 0 0 60px var(--background);
 margin-right: ${props => props.rightMargin ? props.rightMargin : '90px'};
 animation: fadein 0.4s;
 
@@ -24,7 +26,8 @@ animation: fadein 0.4s;
 @media(max-width: 771px){
     margin-right: 0;
     width: 100%;
-    top: 72px;
+    top: 60px;
+    margin-top:0;
     border-radius: 0 6px;
 }
 `

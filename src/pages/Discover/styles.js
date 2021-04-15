@@ -14,7 +14,7 @@ display: flex;
 min-height: 100%;
 width: 100%;
 position: relative;
-padding: 10.4rem 4vw 5vh;
+padding: 9.4rem 4vw 5vh;
 justify-content: center;
 `
 export const Wrapper = styled.div`
@@ -31,6 +31,11 @@ justify-content: space-between;
 align-items: center;
 border-bottom: 1px solid var(--gray-dark);
 padding: 20px 0;
+
+@media(max-width: 600px){
+    flex-direction: column;
+    align-items: center;
+}
 `
 export const Box = styled.div`
 display: flex;
@@ -56,9 +61,17 @@ border-radius: 4px;
 color: var(--title);
 font-family: 'Roboto', sans-serif;
 font-size: 1.4rem;
-height: 69px;
+height: calc(5vh + 2vw);
 width: 153px;
 font-weight: 500;
+transition: filter 0.3s;
+&:hover{
+    filter: brightness(120%);
+}
+
+@media(max-width: 600px){
+    margin-top:40px;
+}
 `
 
 export const Title = styled.h1`
@@ -69,13 +82,20 @@ margin-top: 50px;
 `
 
 export const Trails = styled.section`
-display: flex;
+display: grid;
 width: 100%;
-align-items: center;
+grid-template-columns: repeat(4, 1fr);
 padding: 20px 0;
 border-bottom: 1px solid var(--gray-dark);
-& div + div{
-    margin-left: 35px;
+gap: 32px;
+
+
+@media(max-width: 1300px){
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media(max-width: 768px){
+    grid-template-columns: repeat(1, 1fr);
 }
 `
 
@@ -92,14 +112,17 @@ export const LocationPinIcon = styled(LocationPin)`${iconCSS}`
 export const UserAstronautIcon = styled(UserAstronaut)`${iconCSS}`
 
 export const Marathons = styled.section`
-display: flex;
+display: grid;
+gap: 32px;
 margin-top: 10px;
 width: 100%;
-align-items: center;
+grid-template-columns: repeat(2, 1fr);
 padding: 20px 0;
 border-bottom: 1px solid var(--gray-dark);
-& div + div{
-    margin-left: 35px;
+
+
+@media(max-width: 768px){
+grid-template-columns: repeat(1, 1fr);
 }
 `
 

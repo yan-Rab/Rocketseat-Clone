@@ -10,15 +10,17 @@ import {
 
 
 export const Container = styled.div`
-
 background: var(--gray-dark);
-
 margin-right: 20px;
+margin-top: 26px;
 z-index: 2;
+position: fixed;
 display: flex;
 flex-direction: column;
 border-radius: 6px;
-width: 240px;
+width: 270px;
+
+box-shadow: 0 0 60px var(--background);
 animation: fadein 0.4s;
 
 @keyframes fadein{
@@ -29,6 +31,14 @@ animation: fadein 0.4s;
  100%{
     opacity: 1
  }
+}
+
+@media(max-width: 520px){
+    width: 100%;
+    margin-right: 0;
+    top: 60px;
+    margin-top: 0;
+    border-radius: 0;
 }
 `
 export const GroupLink = styled.span`
